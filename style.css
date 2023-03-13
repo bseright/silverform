@@ -13,6 +13,7 @@ body {
     background-size: cover;
     background-image: linear-gradient(to right, #2978ff50, #2979FF), url("images/backgroundGray.jpg");
     background-position-y: 50%;
+    z-index: 55555;
 }
 
 .main-left img {
