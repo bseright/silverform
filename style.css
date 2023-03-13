@@ -74,6 +74,10 @@ p {
     margin-top: 35px;
 }
 
+.form-right {
+    margin-left: 25px;
+}
+
 .form-field {
     position: relative;
     width: 280px;
