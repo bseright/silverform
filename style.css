@@ -94,6 +94,13 @@ input {
     font-size: 1rem;
 }
 
+input:focus {
+    background-color: #cee0ff;
+    border: 3px solid #cee0ff;
+    outline: none;
+    color: black;
+}
+
 .submit {
     font-family: 'Exo', sans-serif;
     color: #cee0ff;
