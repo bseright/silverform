@@ -11,12 +11,12 @@ body {
 .main-left {
     width: 40%;
     background-size: cover;
-    background-image: linear-gradient(to right, #2978ff00, #2979FF), url("images/backgroundGray.jpg");
+    background-image: linear-gradient(to right, #2978ff50, #2979FF), url("images/backgroundGray.jpg");
     background-position-y: 50%;
 }
 
 .main-left img {
-    height: 80px;
+    height: 60px;
     margin: 20px 0 0 20px;
 }
 
@@ -28,7 +28,8 @@ body {
 }
 
 .form-container {
-    max-width: 650px;
+    min-width: 500px;
+    width: 650px;
     margin-left: 75px;
 }
 
@@ -83,11 +84,14 @@ input {
     align-items: center;
     gap: 10px;
     margin-right: 40px;
-    font-weight: 500;
 }
 
 .submit img {
-    height: 40px;
+    height: 34px;
     width: auto;
+}
+
+.submit h2 {
+    font-weight: 500;
 }
 
