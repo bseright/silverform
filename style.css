@@ -29,7 +29,7 @@ body {
 
 .form-container {
     max-width: 650px;
-    margin-left: 40px;
+    margin-left: 75px;
 }
 
 h1 {
@@ -71,18 +71,19 @@ input {
 
 ::placeholder {
     font-family: 'Josefin Sans', sans-serif;
-    color: #aac9ff;
+    color: #cee0ff;
     font-size: 1rem;
 }
 
 .submit {
     font-family: 'Exo', sans-serif;
-    color: white;
+    color: #cee0ff;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
     margin-right: 40px;
+    font-weight: 500;
 }
 
 .submit img {
