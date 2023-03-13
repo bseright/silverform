@@ -47,18 +47,46 @@ p {
 
 .form {
     margin-top: 40px;
-    display: flex;
+}
+
+.form-row {
+    margin-top: 30px;
+}
+
+.form-right {
+    margin-left: 20px;
 }
 
 input {
-    width: 45%;
+    width: 40%;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 25px;
     border: 3px solid white;
     background-color: #2979FF;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-size: 1rem;
+    padding: 0 15px;
+}
+
+::placeholder {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #aac9ff;
+    font-size: 1rem;
 }
 
 .submit {
-    justify-self: flex-end;
+    font-family: 'Exo', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-right: 40px;
+}
+
+.submit img {
+    height: 40px;
+    width: auto;
 }
 
