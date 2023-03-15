@@ -47,9 +47,9 @@ body {
 .form-container {
     min-width: 500px;
     width: 600px;
-    margin-left: 25%;
+    margin: 0 5% 0 15%;
 
-    background-color: #b7d1ff1a;
+    background: linear-gradient(to right, #2978ff50 0%, #b7d1ff3a 15%);
     padding: 30px 60px 20px 45px;
     border-radius: 10px;
 }
@@ -141,6 +141,7 @@ input:focus {
 .submit {
     font-family: 'Exo', sans-serif;
     justify-content: flex-end;
+    margin-right: -10px;
 }
 
 .submit a {
@@ -149,7 +150,7 @@ input:focus {
     gap: 10px;
     text-decoration: none;
     color: #cee0ff;
-    transition: all .2s ease-in-out;
+    transition: all .2s linear;
     z-index: 100;
 }
 
@@ -161,9 +162,7 @@ input:focus {
 }
 
 .submit a:hover img {
-    height: 31px;
     filter: brightness(100);
-    margin-top: .5px;
 }
 
 .submit img {
