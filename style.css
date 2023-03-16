@@ -100,8 +100,12 @@ p {
 
 .form-field input:focus + label, .form-field input:not(:placeholder-shown) + label {
     opacity: 1;
-    transform: scale(.8) translateY(-260%) translateX(-20px);
+    transform: scale(.8) translateY(-260%) translateX(-15px);
     color: white;
+}
+
+#confirm input:focus + label, #confirm input:not(:placeholder-shown) + label {
+    transform: scale(.8) translateY(-260%) translateX(-25px);
 }
 
 .form-field input {

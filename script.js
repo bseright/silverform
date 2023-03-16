@@ -9,12 +9,6 @@ let password = document.querySelector("#password");
 let confirmPassword = document.querySelector("#confirm-password");
 let submitLink = document.querySelector(".submit-link");
 
-names.forEach(item => {
-    item.onkeydown = function(event) {
-        return /[a-z]/i.test(event.key);
-    }
-});
-
 phone.onkeypress = function(event) {
     if (event.keyCode === 8) {
         return;
@@ -23,16 +17,6 @@ phone.onkeypress = function(event) {
     } else if (phone.value.length === 7) {
         phone.value += "-";
     }
-}
-
-phone.onkeydown = function(event) {
-    let key = window.event ? event.keyCode : event.which;
-
-    if (event.keyCode == 8) {
-        return true;
-    } else if ( key < 48 || key > 57 ) {
-        return false;
-    } else return true;
 }
 
 submitLink.addEventListener("click", function() {
