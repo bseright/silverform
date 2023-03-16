@@ -15,12 +15,24 @@ names.forEach(item => {
     }
 });
 
-phone.onkeyup = function() {
-    if (phone.value.length === 3) {
+phone.onkeypress = function(event) {
+    if (event.keyCode === 8) {
+        return;
+    } else if (phone.value.length === 3) {
         phone.value += "-";
     } else if (phone.value.length === 7) {
         phone.value += "-";
     }
+}
+
+phone.onkeydown = function(event) {
+    let key = window.event ? event.keyCode : event.which;
+
+    if (event.keyCode == 8) {
+        return true;
+    } else if ( key < 48 || key > 57 ) {
+        return false;
+    } else return true;
 }
 
 submitLink.addEventListener("click", function() {
