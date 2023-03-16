@@ -49,8 +49,8 @@ body {
     width: 600px;
     margin: 0 5% 0 15%;
 
-    background: linear-gradient(to right, #2978ff50 0%, #b7d1ff3a 15%);
-    padding: 30px 60px 20px 45px;
+    background: linear-gradient(to right, #2978ff50 0%, #b7d1ff3a 12%);
+    padding: 30px 60px 20px 120px;
     border-radius: 10px;
 }
 
