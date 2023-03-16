@@ -55,19 +55,19 @@ body {
 }
 
 .form-narrative p {
-    margin-left: 5px;
+    margin-left: 3px;
 }
 
 h1 {
     font-family: 'Exo', sans-serif;
     color: white;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
 }
 
 p {
     color: white;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.6rem;
 }
 
