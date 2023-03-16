@@ -175,3 +175,7 @@ input:focus {
     font-weight: 500;
 }
 
+.missing {
+    border: 2px solid rgb(245, 132, 132);
+}
+
