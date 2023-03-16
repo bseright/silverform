@@ -108,6 +108,10 @@ p {
     transform: scale(.8) translateY(-260%) translateX(-25px);
 }
 
+.second-row input:focus + label, .second-row input:not(:placeholder-shown) + label {
+    transform: scale(.8) translateY(-260%) translateX(-9px);
+}
+
 .form-field input {
     height: 40px;
     width: 90%;
@@ -179,7 +183,7 @@ input:focus {
     font-weight: 500;
 }
 
-.missing {
-    border: 2px solid rgb(245, 132, 132);
+.invalid {
+    background-color: rgb(245, 132, 132);
 }
 
