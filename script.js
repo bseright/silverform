@@ -10,11 +10,18 @@ let confirmPassword = document.querySelector("#confirm-password");
 let submitLink = document.querySelector(".submit-link");
 
 names.forEach(item => {
-    item.onkeydown = function() {
+    item.onkeydown = function(event) {
         return /[a-z]/i.test(event.key);
     }
-})
+});
 
+phone.onkeyup = function() {
+    if (phone.value.length === 3) {
+        phone.value += "-";
+    } else if (phone.value.length === 7) {
+        phone.value += "-";
+    }
+}
 
 submitLink.addEventListener("click", function() {
 
