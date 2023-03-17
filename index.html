@@ -38,13 +38,13 @@
         
                     <div class="form-row">
                         <div class="form-field second-row">
-                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <input type="email" id="email" name="email" placeholder=" " required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                             <label id="email-label" for="email">Email</label>
                         </div>
 
                         <div class="form-field form-right second-row">
                             <input type="tel" id="phone" name="phone" placeholder=" " required pattern="\d{3}[\-]\d{3}[\-]\d{4}" maxlength="12">
-                            <label for="phone">Phone</label>
+                            <label id="phone-label" for="phone">Phone</label>
                         </div>
                     </div>
         
