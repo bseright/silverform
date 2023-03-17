@@ -170,13 +170,13 @@ function validatePassword() {
         totalErrors++;
     }
 
-    passwordLabel.style.marginLeft = "-3px";
+    passwordLabel.style.marginLeft = "-1px";
     passwordLabel.style.paddingRight = "10px";
     passwordLabel.style.fontStyle = "italic";
     passwordLabel.style.color = "rgb(255, 222, 0)";
     password.value = "";
 
-    confirmLabel.style.marginLeft = "-3px";
+    confirmLabel.style.marginLeft = "-1px";
     confirmLabel.style.paddingRight = "10px";
     confirmLabel.style.fontStyle = "italic";
     confirmLabel.style.color = "rgb(255, 222, 0)";

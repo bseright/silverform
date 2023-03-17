@@ -130,8 +130,8 @@ p {
     color: black;
 }
 
-.second-row input {
-    padding: 4px 19px 0 21px;
+.second-row input, .third-row input {
+    padding-left: 21px;
 }
 
 .form-field label {
