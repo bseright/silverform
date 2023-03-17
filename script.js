@@ -15,7 +15,10 @@ let phoneLabel = document.querySelector("#phone-label");
 let phoneStatus;
 
 let password = document.querySelector("#password");
+let passwordLabel = document.querySelector("#password-label");
+
 let confirmPassword = document.querySelector("#confirm-password");
+let confirmLabel = document.querySelector("#confirm-label");
 
 let submitLink = document.querySelector(".submit-link");
 
@@ -51,6 +54,22 @@ phone.addEventListener("focus", function() {
     }
 })
 
+password.addEventListener("focus", function() {
+    if (passwordLabel.textContent === "Invalid Password" || passwordLabel.textContent === "Non-Matching Password") {
+        passwordLabel.textContent = "Password";
+        passwordLabel.style.fontStyle = "normal";
+        passwordLabel.style.color = "white";
+    }
+})
+
+confirmPassword.addEventListener("focus", function() {
+    if (confirmLabel.textContent === "Invalid Password" || confirmLabel.textContent === "Non-Matching Password") {
+        confirmLabel.textContent = "Confirm Password";
+        confirmLabel.style.fontStyle = "normal";
+        confirmLabel.style.color = "white";
+    }
+})
+
 phone.onkeypress = function(event) {
     if (event.keyCode === 8) {
         return;
@@ -60,6 +79,7 @@ phone.onkeypress = function(event) {
         phone.value += "-";
     }
 }
+
 
 function validateFirst() {
     if (firstName.value === "") {
@@ -120,6 +140,28 @@ function validatePhone() {
     }
 }
 
+function validatePassword() {
+    if (password.value === "" || confirmPassword.value === "") {
+        passwordLabel.textContent = "Invalid Password";
+        confirmLabel.textContent = "Invalid Password";
+    } else if (password.value !== confirmPassword.value) {
+        passwordLabel.textContent = "Non-Matching Password";
+        confirmLabel.textContent = "Non-Matching Password";
+    }
+
+    passwordLabel.style.marginLeft = "-5px";
+    passwordLabel.style.paddingRight = "5px";
+    passwordLabel.style.fontStyle = "italic";
+    passwordLabel.style.color = "rgb(255, 222, 0)";
+    password.value = "";
+
+    confirmLabel.style.marginLeft = "-5px";
+    confirmLabel.style.paddingRight = "5px";
+    confirmLabel.style.fontStyle = "italic";
+    confirmLabel.style.color = "rgb(255, 222, 0)";
+    confirmPassword.value = "";
+}
+
 
 submitLink.addEventListener("click", function() {
 
@@ -127,6 +169,7 @@ submitLink.addEventListener("click", function() {
     validateLast();
     validateEmail();
     validatePhone();
+    validatePassword();
 
     // form.submit();
 });
