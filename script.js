@@ -115,14 +115,14 @@ function validateLast() {
 function validateEmail() {
     if (email.checkValidity()) {
         if (emailStatus === "invalid") {
-            emailLabel.style.marginLeft = "-2px";
+            emailLabel.style.marginLeft = "0px";
             emailLabel.textContent = "Email";
             emailLabel.style.fontStyle = "normal";
             emailLabel.style.color = "white";
             emailStatus = "valid";
         }
     } else {
-        emailLabel.style.marginLeft = "-3px";
+        emailLabel.style.marginLeft = "0px";
         emailLabel.style.paddingRight = "5px";
         emailLabel.textContent = "Invalid Email";
         emailLabel.style.fontStyle = "italic";

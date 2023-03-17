@@ -135,7 +135,7 @@ p {
 }
 
 .form-field label {
-    transition: all 0.2s;
+    transition: all 0.1s;
     transition-timing-function: ease;
     transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
 
@@ -198,24 +198,24 @@ input:focus {
   
 @keyframes jiggle {
     10%, 90% {
-        transform: translate(-2px, 0);
+        transform: translate(-1px, 0);
     }
 
     20%, 80% {
-        transform: translate(4px, 0);
+        transform: translate(2px, 0);
     }
 
     30%, 50%, 70% {
-        transform: translate(-8px, 0);
+        transform: translate(-4px, 0);
     }
 
     40%, 60% {
-        transform: translate(8px, 0);
+        transform: translate(4px, 0);
     }
 }
 
 .bounce-in {
-    animation: bounce-in 2s ease;
+    animation: bounce-in 1s ease;
     animation-fill-mode: forwards;
 }
 
