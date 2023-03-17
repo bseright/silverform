@@ -137,14 +137,14 @@ function validateEmail() {
 function validatePhone() {
     if (phone.checkValidity()) {
         if (phoneStatus === "invalid") {
-            phoneLabel.style.marginLeft = "-3px";
+            phoneLabel.style.marginLeft = "-4px";
             phoneLabel.textContent = "Phone";
             phoneLabel.style.fontStyle = "normal";
             phoneLabel.style.color = "white";
             phoneStatus = "valid";
         }
     } else {
-        phoneLabel.style.marginLeft = "-3px";
+        phoneLabel.style.marginLeft = "-4px";
         phoneLabel.textContent = "Invalid Phone";
         phoneLabel.style.fontStyle = "italic";
         phoneLabel.style.color = "rgb(255, 222, 0)";
@@ -185,9 +185,9 @@ function validatePassword() {
 
 function stopForm() {
     allInputs.forEach(item => {
-        item.style.backgroundColor = "rgb(79, 137, 235)";
-        item.style.border = "1px solid rgb(222, 234, 255)";
-        item.style.color = "rgb(222, 234, 255)";
+        item.style.backgroundColor = "#488EFF";
+        item.style.border = "1px solid #488EFF";
+        item.style.color = "rgb(140, 181, 254)";
         item.style.pointerEvents = "none";
     });
 

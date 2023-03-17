@@ -72,7 +72,7 @@ p {
 }
 
 .form {
-    margin-top: 40px;
+    margin-top: 55px;
     background-color: #488EFF;
 }
 
@@ -124,6 +124,10 @@ p {
     font-size: 1.1rem;
     padding: 4px 19px 0 19px;
     color: black;
+}
+
+.second-row input {
+    padding: 4px 19px 0 21px;
 }
 
 .form-field label {
