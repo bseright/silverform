@@ -218,7 +218,6 @@ function checkErrors() {
     }
 }
 
-
 submitLink.addEventListener("click", function() {
 
     validateFirst();
@@ -230,4 +229,20 @@ submitLink.addEventListener("click", function() {
     checkErrors();
 
     totalErrors = 0;
+});
+
+allInputs.forEach(item => {
+    item.addEventListener("keypress", function(event) {
+        if (event.keyCode === 13) {
+            validateFirst();
+            validateLast();
+            validateEmail();
+            validatePhone();
+            validatePassword();
+        
+            checkErrors();
+        
+            totalErrors = 0;
+        }
+    })
 });
