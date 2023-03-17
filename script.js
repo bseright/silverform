@@ -156,7 +156,9 @@ function validatePassword() {
         confirmLabel.textContent = "Invalid Password";
 
         totalErrors++;
-    } else if (password.value !== confirmPassword.value) {
+    } else if (password.value === confirmPassword.value) {
+        return;
+    } else {
         passwordLabel.textContent = "Non-Matching Password";
         confirmLabel.textContent = "Non-Matching Password";
 
@@ -164,13 +166,13 @@ function validatePassword() {
     }
 
     passwordLabel.style.marginLeft = "-5px";
-    passwordLabel.style.paddingRight = "5px";
+    passwordLabel.style.paddingRight = "10px";
     passwordLabel.style.fontStyle = "italic";
     passwordLabel.style.color = "rgb(255, 222, 0)";
     password.value = "";
 
     confirmLabel.style.marginLeft = "-5px";
-    confirmLabel.style.paddingRight = "5px";
+    confirmLabel.style.paddingRight = "10px";
     confirmLabel.style.fontStyle = "italic";
     confirmLabel.style.color = "rgb(255, 222, 0)";
     confirmPassword.value = "";
