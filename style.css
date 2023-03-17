@@ -206,7 +206,8 @@ input:focus {
 }
 
 .hideForm {
-    animation: hideForm 3s linear;
+    animation: hideForm .5s linear;
+    animation-fill-mode: forwards;
 }
 
 @keyframes hideForm {
