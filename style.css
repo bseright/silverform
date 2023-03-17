@@ -183,7 +183,25 @@ input:focus {
     font-weight: 500;
 }
 
-.invalid {
-    background-color: rgb(245, 132, 132);
+.jiggle {
+    animation: jiggle 0.5s linear;
+  }
+  
+@keyframes jiggle {
+    10%, 90% {
+        transform: translate(-2px, 0);
+    }
+
+    20%, 80% {
+        transform: translate(4px, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate(-8px, 0);
+    }
+
+    40%, 60% {
+        transform: translate(8px, 0);
+    }
 }
 

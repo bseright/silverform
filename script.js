@@ -21,6 +21,8 @@ let confirmPassword = document.querySelector("#confirm-password");
 let confirmLabel = document.querySelector("#confirm-label");
 
 let submitLink = document.querySelector(".submit-link");
+let totalErrors = 0;
+let jiggleTimer;
 
 firstName.addEventListener("focus", function() {
     if (firstLabel.textContent === "Invalid First Name") {
@@ -88,6 +90,8 @@ function validateFirst() {
         firstLabel.textContent = "Invalid First Name";
         firstLabel.style.fontStyle = "italic";
         firstLabel.style.color = "rgb(255, 222, 0)";
+
+        totalErrors++;
     }
 }
 
@@ -98,6 +102,8 @@ function validateLast() {
         lastLabel.textContent = "Invalid Last Name";
         lastLabel.style.fontStyle = "italic";
         lastLabel.style.color = "rgb(255, 222, 0)";
+
+        totalErrors++;
     }
 }
 
@@ -118,6 +124,8 @@ function validateEmail() {
         emailLabel.style.color = "rgb(255, 222, 0)";
         emailStatus = "invalid";
         email.value = "";
+
+        totalErrors++;
     }
 }
 
@@ -137,6 +145,8 @@ function validatePhone() {
         phoneLabel.style.color = "rgb(255, 222, 0)";
         phoneStatus = "invalid";
         phone.value = "";
+
+        totalErrors++;
     }
 }
 
@@ -144,9 +154,13 @@ function validatePassword() {
     if (password.value === "" || confirmPassword.value === "") {
         passwordLabel.textContent = "Invalid Password";
         confirmLabel.textContent = "Invalid Password";
+
+        totalErrors++;
     } else if (password.value !== confirmPassword.value) {
         passwordLabel.textContent = "Non-Matching Password";
         confirmLabel.textContent = "Non-Matching Password";
+
+        totalErrors++;
     }
 
     passwordLabel.style.marginLeft = "-5px";
@@ -162,6 +176,20 @@ function validatePassword() {
     confirmPassword.value = "";
 }
 
+function checkErrors() {
+    if (totalErrors > 0) {
+        clearTimeout(jiggleTimer);
+
+        submitLink.classList.add("jiggle");
+
+        jiggleTimer = setTimeout(() => {
+            submitLink.classList.remove("jiggle");
+        }, "600")
+    } else {
+        clearTimeout(jiggleTimer);
+    }
+}
+
 
 submitLink.addEventListener("click", function() {
 
@@ -171,5 +199,8 @@ submitLink.addEventListener("click", function() {
     validatePhone();
     validatePassword();
 
-    // form.submit();
+    checkErrors();
+    totalErrors = 0;
+
+    // form.submit(); if this was a real form :(
 });
