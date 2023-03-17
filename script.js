@@ -90,7 +90,7 @@ phone.onkeypress = function(event) {
 
 function validateFirst() {
     if (firstName.value === "") {
-        firstLabel.style.marginLeft = "-3px";
+        firstLabel.style.marginLeft = "-1px";
         firstLabel.style.paddingRight = "5px";
         firstLabel.textContent = "Invalid First Name";
         firstLabel.style.fontStyle = "italic";
@@ -102,7 +102,7 @@ function validateFirst() {
 
 function validateLast() {
     if (lastName.value === "") {
-        lastLabel.style.marginLeft = "-3px";
+        lastLabel.style.marginLeft = "-1px";
         lastLabel.style.paddingRight = "5px";
         lastLabel.textContent = "Invalid Last Name";
         lastLabel.style.fontStyle = "italic";
@@ -115,7 +115,7 @@ function validateLast() {
 function validateEmail() {
     if (email.checkValidity()) {
         if (emailStatus === "invalid") {
-            emailLabel.style.marginLeft = "-3px";
+            emailLabel.style.marginLeft = "-2px";
             emailLabel.textContent = "Email";
             emailLabel.style.fontStyle = "normal";
             emailLabel.style.color = "white";
@@ -137,14 +137,14 @@ function validateEmail() {
 function validatePhone() {
     if (phone.checkValidity()) {
         if (phoneStatus === "invalid") {
-            phoneLabel.style.marginLeft = "-4px";
+            phoneLabel.style.marginLeft = "-1px";
             phoneLabel.textContent = "Phone";
             phoneLabel.style.fontStyle = "normal";
             phoneLabel.style.color = "white";
             phoneStatus = "valid";
         }
     } else {
-        phoneLabel.style.marginLeft = "-4px";
+        phoneLabel.style.marginLeft = "-1px";
         phoneLabel.textContent = "Invalid Phone";
         phoneLabel.style.fontStyle = "italic";
         phoneLabel.style.color = "rgb(255, 222, 0)";
