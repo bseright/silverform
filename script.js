@@ -191,6 +191,11 @@ function checkErrors() {
         clearTimeout(jiggleTimer);
 
         form.classList.add("hideForm");
+
+        setTimeout(() => {
+            form.style.pointerEvents = "none";
+            form.style.zIndex = "0";
+        }, "600")
         // form.submit(); // form "submits" if no errors are found
     }
 }
