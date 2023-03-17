@@ -105,8 +105,12 @@ p {
     color: white;
 }
 
+#password-div input:focus + label, #password-div input:not(:placeholder-shown) + label {
+    transform: scale(.8) translateY(-260%) translateX(-12px);
+}
+
 #confirm input:focus + label, #confirm input:not(:placeholder-shown) + label {
-    transform: scale(.8) translateY(-260%) translateX(-25px);
+    transform: scale(.8) translateY(-260%) translateX(-20px);
 }
 
 .second-row input:focus + label, .second-row input:not(:placeholder-shown) + label {
@@ -228,3 +232,13 @@ input:focus {
         transform: scale(1); 
     }
 }
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
