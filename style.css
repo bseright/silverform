@@ -72,7 +72,7 @@ p {
 }
 
 .form {
-    margin-top: 60px;
+    margin-top: 40px;
     background-color: #488EFF;
 }
 
@@ -117,7 +117,7 @@ p {
     height: 40px;
     width: 90%;
     border-radius: 25px;
-    border: 2px solid white;
+    border: 1px solid white;
     background-color: #b7d1ff1a;
     font-family: 'Josefin Sans', sans-serif;
     color: white;
@@ -138,12 +138,12 @@ p {
 
 input:not(:placeholder-shown) {
     background-color: #cee0ff;
-    border: 2px solid #cee0ff;
+    border: 1px solid #cee0ff;
 }
 
 input:focus {
     background-color: #cee0ff;
-    border: 2px solid #cee0ff;
+    border: 1px solid #cee0ff;
     outline: none;
 }
 
@@ -206,17 +206,21 @@ input:focus {
     }
 }
 
-.hideForm {
-    animation: hideForm .5s linear;
+.bounce-in {
+    animation: bounce-in 2s ease;
     animation-fill-mode: forwards;
 }
 
-@keyframes hideForm {
+@keyframes bounce-in {
     0% {
-        opacity: 100%;
-    }
-
-    100% {
-        opacity: 0%;
+        opacity: 0;
+        transform: scale(.3);
+    } 50% {
+        opacity: 1;
+        transform: scale(1.05);
+    } 70% { 
+        transform: scale(.9);
+    } 100% { 
+        transform: scale(1); 
     }
 }

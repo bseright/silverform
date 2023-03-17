@@ -1,4 +1,6 @@
 let form = document.querySelector("form");
+let allInputs = document.querySelectorAll("input");
+let allLabels = document.querySelectorAll("label");
 
 let firstName = document.querySelector("#first-name");
 let firstLabel = document.querySelector("#first-label");
@@ -20,7 +22,10 @@ let passwordLabel = document.querySelector("#password-label");
 let confirmPassword = document.querySelector("#confirm-password");
 let confirmLabel = document.querySelector("#confirm-label");
 
+let submitHeader = document.querySelector(".submit-link h2");
+let submitImage = document.querySelector(".submit-link img")
 let submitLink = document.querySelector(".submit-link");
+
 let totalErrors = 0;
 let jiggleTimer;
 
@@ -85,7 +90,7 @@ phone.onkeypress = function(event) {
 
 function validateFirst() {
     if (firstName.value === "") {
-        firstLabel.style.marginLeft = "-5px";
+        firstLabel.style.marginLeft = "-3px";
         firstLabel.style.paddingRight = "5px";
         firstLabel.textContent = "Invalid First Name";
         firstLabel.style.fontStyle = "italic";
@@ -97,7 +102,7 @@ function validateFirst() {
 
 function validateLast() {
     if (lastName.value === "") {
-        lastLabel.style.marginLeft = "-5px";
+        lastLabel.style.marginLeft = "-3px";
         lastLabel.style.paddingRight = "5px";
         lastLabel.textContent = "Invalid Last Name";
         lastLabel.style.fontStyle = "italic";
@@ -110,14 +115,14 @@ function validateLast() {
 function validateEmail() {
     if (email.checkValidity()) {
         if (emailStatus === "invalid") {
-            emailLabel.style.marginLeft = "0px";
+            emailLabel.style.marginLeft = "-3px";
             emailLabel.textContent = "Email";
             emailLabel.style.fontStyle = "normal";
             emailLabel.style.color = "white";
             emailStatus = "valid";
         }
     } else {
-        emailLabel.style.marginLeft = "-5px";
+        emailLabel.style.marginLeft = "-3px";
         emailLabel.style.paddingRight = "5px";
         emailLabel.textContent = "Invalid Email";
         emailLabel.style.fontStyle = "italic";
@@ -132,14 +137,14 @@ function validateEmail() {
 function validatePhone() {
     if (phone.checkValidity()) {
         if (phoneStatus === "invalid") {
-            phoneLabel.style.marginLeft = "0px";
+            phoneLabel.style.marginLeft = "-3px";
             phoneLabel.textContent = "Phone";
             phoneLabel.style.fontStyle = "normal";
             phoneLabel.style.color = "white";
             phoneStatus = "valid";
         }
     } else {
-        phoneLabel.style.marginLeft = "-5px";
+        phoneLabel.style.marginLeft = "-3px";
         phoneLabel.textContent = "Invalid Phone";
         phoneLabel.style.fontStyle = "italic";
         phoneLabel.style.color = "rgb(255, 222, 0)";
@@ -165,17 +170,36 @@ function validatePassword() {
         totalErrors++;
     }
 
-    passwordLabel.style.marginLeft = "-5px";
+    passwordLabel.style.marginLeft = "-3px";
     passwordLabel.style.paddingRight = "10px";
     passwordLabel.style.fontStyle = "italic";
     passwordLabel.style.color = "rgb(255, 222, 0)";
     password.value = "";
 
-    confirmLabel.style.marginLeft = "-5px";
+    confirmLabel.style.marginLeft = "-3px";
     confirmLabel.style.paddingRight = "10px";
     confirmLabel.style.fontStyle = "italic";
     confirmLabel.style.color = "rgb(255, 222, 0)";
     confirmPassword.value = "";
+}
+
+function stopForm() {
+    allInputs.forEach(item => {
+        item.style.backgroundColor = "rgb(79, 137, 235)";
+        item.style.border = "1px solid rgb(222, 234, 255)";
+        item.style.color = "rgb(222, 234, 255)";
+        item.style.pointerEvents = "none";
+    });
+
+    allLabels.forEach(item => {
+        item.style.color = "rgb(222, 234, 255)";
+    });
+
+    submitHeader.textContent = "Submitted!";
+    submitHeader.style.color = "white";
+    submitLink.style.pointerEvents = "none";
+    submitHeader.classList.add("bounce-in");
+    submitImage.remove();
 }
 
 function checkErrors() {
@@ -189,13 +213,7 @@ function checkErrors() {
         }, "600")
     } else {
         clearTimeout(jiggleTimer);
-
-        form.classList.add("hideForm");
-
-        setTimeout(() => {
-            form.style.pointerEvents = "none";
-            form.style.zIndex = "0";
-        }, "600")
+        stopForm();
         // form.submit(); // form "submits" if no errors are found
     }
 }
