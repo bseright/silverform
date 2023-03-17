@@ -189,6 +189,9 @@ function checkErrors() {
         }, "600")
     } else {
         clearTimeout(jiggleTimer);
+
+        form.classList.add("hideForm");
+        // form.submit(); // form "submits" if no errors are found
     }
 }
 
@@ -202,7 +205,6 @@ submitLink.addEventListener("click", function() {
     validatePassword();
 
     checkErrors();
-    totalErrors = 0;
 
-    // form.submit(); if this was a real form :(
+    totalErrors = 0;
 });

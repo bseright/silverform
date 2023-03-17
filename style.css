@@ -185,7 +185,7 @@ input:focus {
 
 .jiggle {
     animation: jiggle 0.5s linear;
-  }
+}
   
 @keyframes jiggle {
     10%, 90% {
@@ -205,3 +205,16 @@ input:focus {
     }
 }
 
+.hideForm {
+    animation: hideForm 3s linear;
+}
+
+@keyframes hideForm {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
