@@ -31,6 +31,7 @@
 ## Room for Improvement
 - Better understanding of css form selectors to avoid an abundance of tinkering.
 - Continued form design and user experience research to better this experience. 
+- Revise styling for mobile-responsiveness.
 
 ## Contact
 Created by Britain Seright ([@bseright](https://github.com/bseright))
